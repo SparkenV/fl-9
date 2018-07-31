@@ -1,0 +1,124 @@
+
+@media print {  
+.tm-sidebar{
+	display: none;
+	}
+.tm-main-content{
+	
+	margin-left: 0;
+}	
+blocks{display:none;}
+section.tm-content-box{ display:none;}
+
+#ideas{display:none;}
+#about{display:none;}
+.gallery-container{display: none;}
+
+#home::before{ border: transparent; }
+
+
+h2.tm-section-title{ 
+color:blue;
+font-size: 45px}
+.tm-content-box{display: block;}
+p.tm-section-description{
+	width:1000px;
+	font-size: 28px;
+}
+	
+div.flex-item > img{
+	display:block;
+	margin: 0 auto;
+}
+	
+	
+	
+
+}
+
+ @media not print{
+#home::before
+	{
+	content: ''; 
+	width: 0;
+	height: 0;
+	border-top: 20px solid #5ce; 
+	border-right: 100px solid transparent;	
+	display: block;
+	}
+	section::before{
+	content: ''; 
+	width: 0;
+	height: 0;
+	border-top: 20px solid #5ce; 
+	border-right: 100px solid transparent;	
+	display: block;
+	}
+	
+	p::first-letter { 
+    font-size: 30px;
+    color: #76cdd7;
+	}
+	
+	#tmCarousel h2.tm-section-title{
+	color: #dcdcdc;
+	letter-spacing: 5px;
+	}
+	
+	h2 + p{ 	font-style: italic;}
+	
+	p{	text-indent: 25px; }
+	
+	div.pad > h2{	text-align: center;	}
+	
+	div.pad > ol > li> a:visited{	color: gray;}
+	
+	div.pad > ol > li> a:hover{ color: blue;}
+	
+	div.pad ol li:nth-child(1) :after, 
+	div.pad ol li:nth-child(3) :after{
+		content: "new";	
+		font-size: 50%;
+		vertical-align: top;
+		color : red;
+	}
+	
+	text-decoration: underline;
+	text-decoration-style: double;
+	}
+	
+	
+	
+	p.tm-banner-text{		text-indent: 0px; 	}
+ }
+
+
+
+
+.tm-content-box, .tm-sidebar{
+	box-shadow: 0 0 10px;
+	
+    
+}
+
+
+
+
+
+h2.tm-box-bg-title:hover{
+	background-color: #20b4dd;
+	color: white;
+	font-weight: 700;
+}
+
+.thumbnail{
+	
+	border-radius: 50%;
+	
+	
+}
+
+
+
+
+
