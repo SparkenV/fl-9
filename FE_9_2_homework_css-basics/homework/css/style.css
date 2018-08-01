@@ -22,6 +22,15 @@ font-size: 45px}
 
 .tm-content-box{display: block;}
 
+div.tm-banner-inner > img{ width: 170px;}
+p.tm-banner-text{ font-size: 2.5em;}
+
+.tm-team-description-container{ padding-top: 0; padding-bottom: 0;}
+
+div.flex-item > img { width: 425px;}
+
+.tm-footer > p{ font-size: 26px;}
+
 p.tm-section-description{
 	width:1000px;
 	font-size: 28px;
