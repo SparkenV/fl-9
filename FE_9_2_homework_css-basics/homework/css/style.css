@@ -1,17 +1,16 @@
 
 @media print {  
-.tm-sidebar{
-	display: none;
-	}
-.tm-main-content{
-	
-	margin-left: 0;
-}	
-blocks{display:none;}
+
+.tm-main-content{	margin-left: 0;}	
+
 section.tm-content-box{ display:none;}
 
-#ideas{display:none;}
-#about{display:none;}
+#ideas,
+#about,
+.blocks,
+.tm-sidebar
+{display:none;}
+
 .gallery-container{display: none;}
 
 #home::before{ border: transparent; }
@@ -20,7 +19,9 @@ section.tm-content-box{ display:none;}
 h2.tm-section-title{ 
 color:blue;
 font-size: 45px}
+
 .tm-content-box{display: block;}
+
 p.tm-section-description{
 	width:1000px;
 	font-size: 28px;
@@ -31,7 +32,7 @@ div.flex-item > img{
 	margin: 0 auto;
 }
 	
-	
+body{	background-color: red;}
 	
 
 }
@@ -46,6 +47,7 @@ div.flex-item > img{
 	border-right: 100px solid transparent;	
 	display: block;
 	}
+	
 	section::before{
 	content: ''; 
 	width: 0;
@@ -69,11 +71,15 @@ div.flex-item > img{
 	
 	p{	text-indent: 25px; }
 	
-	div.pad > h2{	text-align: center;	}
+	section.heading > div.pad > h2{	text-align: center;	}
 	
 	div.pad > ol > li> a:visited{	color: gray;}
 	
-	div.pad > ol > li> a:hover{ color: blue;}
+	div.pad > ol > li> a:hover{
+		color: #56c2e0;
+		text-decoration: underline;
+		text-decoration-style: double;
+		}
 	
 	div.pad ol li:nth-child(1) :after, 
 	div.pad ol li:nth-child(3) :after{
@@ -83,27 +89,40 @@ div.flex-item > img{
 		color : red;
 	}
 	
-	text-decoration: underline;
-	text-decoration-style: double;
+	div.tm-content-box > ul.gallery-container > li:nth-child(odd){	background-color: #f5f5f5;}
+	
+	div.tm-content-box > ul.gallery-container > li > div> p{	text-indent: 0;}
+	
+	div.tm-content-box > ul.gallery-container > li > div> p::first-letter{	color: initial; }
+	
+	nav.tm-main-nav > ul > li:nth-child(1),
+	nav.tm-main-nav > ul > li:nth-child(2),
+	nav.tm-main-nav > ul > li:nth-child(3){
+	border-bottom: 2px dotted silver;
 	}
 	
+	.form-control,
+	.submit-btn{
+		color: red;
+	}
 	
+	.submit-btn:hover{
+		color: white;
+		background-color: #56c2e0;
+		border-color: white;
+	}
 	
+	.mandatory-field:after {	
+    color: red;
+    content: '*';
+	font-size: 18px;
+	font-weight: 600;
+}
+
 	p.tm-banner-text{		text-indent: 0px; 	}
  }
 
-
-
-
-.tm-content-box, .tm-sidebar{
-	box-shadow: 0 0 10px;
-	
-    
-}
-
-
-
-
+.tm-content-box, .tm-sidebar{	box-shadow: 0 0 10px;}
 
 h2.tm-box-bg-title:hover{
 	background-color: #20b4dd;
@@ -111,14 +130,4 @@ h2.tm-box-bg-title:hover{
 	font-weight: 700;
 }
 
-.thumbnail{
-	
-	border-radius: 50%;
-	
-	
-}
-
-
-
-
-
+.thumbnail{	border-radius: 50%;	}
