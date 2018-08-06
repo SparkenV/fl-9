@@ -123,3 +123,6 @@ div.toolbar {
         background-color: #fd8162; }
       #contact form .submit-btn:active {
         background-color: #f53304; }
+
+footer {
+  padding-left: 15px; }
