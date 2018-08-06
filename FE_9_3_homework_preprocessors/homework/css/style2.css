@@ -1,0 +1,83 @@
+div.main-wrapper {
+  padding: 0 8%; }
+
+header {
+  display: flex; }
+  header div.logo img {
+    width: 100%; }
+  header nav {
+    display: table;
+    width: 100%;
+    height: 5%;
+    border-top: 1px solid #305075;
+    border-bottom: 1px solid  #305075;
+    padding: 23px 0px;
+    margin-top: 180px;
+    align-items: center; }
+    header nav a {
+      font-family: Arial;
+      text-align: center;
+      text-decoration: none;
+      color: #39b5d5;
+      display: table-cell;
+      text-transform: uppercase;
+      width: 30%; }
+
+div.toolbar {
+  text-align: right; }
+  div.toolbar input {
+    height: 35px;
+    width: 18%;
+    color: #39b5d5;
+    border: 1.25px solid #39b5d5;
+    padding-left: 1%; }
+  div.toolbar input::placeholder {
+    color: #39b5d5;
+    font-size: 15px; }
+
+#list {
+  display: table; }
+  #list article:nth-child(odd) {
+    margin-right: 22px; }
+  #list article {
+    display: table-cell;
+    float: left;
+    width: 49%;
+    margin-top: 20px;
+    background-color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkcyan; }
+    #list article img {
+      padding-top: 3%;
+      padding-left: 3%;
+      padding-right: 3%;
+      width: 94%; }
+    #list article div {
+      padding: 5px 22px 15px 28px;
+      width: 90%; }
+    #list article div.post-description {
+      color: darkcyan;
+      padding: 0;
+      padding-left: 1%; }
+    #list article h3 {
+      font-size: 1.6em;
+      text-transform: uppercase;
+      border-top: 1px solid darkcyan;
+      padding-top: 5px;
+      margin: 12px 0 0 0; }
+    #list article p {
+      color: #6d8ca0;
+      font-family: sans-serif;
+      font-size: 1.14em;
+      margin: 8px 0 18px 0;
+      line-height: 30px; }
+
+#about {
+  font-family: sans-serif; }
+  #about div h1 {
+    text-transform: uppercase;
+    text-align: right;
+    color: #39b5d5; }
+  #about div p {
+    color: #6d8ca0;
+    font-size: 1.12em; }

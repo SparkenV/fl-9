@@ -1,0 +1,124 @@
+$myColor: rgb(109, 140, 160);
+$toolbarColor: #39b5d5;
+$sansFont: sans-serif;
+
+
+div.main-wrapper{
+    padding: 0 8%;
+}
+
+header {
+    display: flex;   
+    div.logo{
+        img{
+            width: 100%;
+        }
+    }
+
+    nav{
+        display: table;
+        width: 100%;
+        height: 5%;
+        border-top: 1px solid #305075;
+        border-bottom: 1px solid  #305075;
+        padding: 23px 0px;
+        margin-top: 180px;
+        align-items: center;
+        a{
+            font-family: Arial;
+            text-align:  center;
+            text-decoration: none;
+            color: #39b5d5;
+            display: table-cell;
+            text-transform: uppercase;
+            width: 30%;
+        }
+    }
+}
+
+div.toolbar{
+    text-align: right;
+    input{
+        height: 35px;
+        width: 18%;
+        color: $toolbarColor;  
+        border: 1.25px solid $toolbarColor;
+        padding-left: 1%;
+        
+    }
+    input::placeholder{
+        color: $toolbarColor;
+        font-size: 15px;    
+    }
+}
+
+#list
+{
+
+    display: table;
+
+    article:nth-child(odd)
+    {
+        margin-right: 22px;
+    }
+
+    article{
+        display: table-cell;
+        float: left;
+        width: 49%;
+        margin-top: 20px;
+        
+        background-color: gainsboro; 
+        font-family: Arial, Helvetica, sans-serif;
+        color: darkcyan;
+        img{
+
+            padding-top: 3%;
+            padding-left: 3%;
+            padding-right: 3%;
+            width: 94%
+
+
+        }
+        div{    
+            padding: 5px 22px 15px 28px;
+            width: 90%
+        }
+        div.post-description{
+            color: darkcyan;
+            padding: 0;
+            padding-left: 1%;
+        }
+        h3{
+            font-size: 1.6em;
+            text-transform: uppercase;
+            border-top: 1px solid darkcyan;
+            padding-top: 5px;
+            margin: 12px 0 0 0;
+        }
+        p{
+            color: $myColor;
+            font-family:sans-serif;
+            font-size: 1.14em;
+            margin: 8px 0 18px 0;
+            line-height: 30px;
+        }
+
+    }
+}
+#about{
+    font-family: $sansFont;
+    div{
+
+        h1{
+            text-transform: uppercase;
+            text-align: right;
+            color: $toolbarColor;
+        }
+        
+        p{
+            color: $myColor;
+            font-size: 1.12em;
+        }
+    }
+}
