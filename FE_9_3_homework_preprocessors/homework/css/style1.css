@@ -1,3 +1,6 @@
+body {
+  background-color: white; }
+
 div.main-wrapper {
   padding: 0 8%; }
 
@@ -10,12 +13,12 @@ header {
     width: 100%;
     height: 5%;
     border-top: 1px solid #305075;
-    border-bottom: 1px solid  #305075;
+    border-bottom: 1px solid #305075;
     padding: 23px 0px;
     margin-top: 180px;
     align-items: center; }
     header nav a {
-      font-family: Arial;
+      font-family: sans-serif;
       text-align: center;
       text-decoration: none;
       color: #39b5d5;
@@ -30,7 +33,8 @@ div.toolbar {
     width: 18%;
     color: #39b5d5;
     border: 1.25px solid #39b5d5;
-    padding-left: 1%; }
+    padding-left: 1%;
+    background-color: transparent; }
   div.toolbar input::placeholder {
     color: #39b5d5;
     font-size: 15px; }
@@ -45,7 +49,7 @@ div.toolbar {
     width: 49%;
     margin-top: 20px;
     background-color: gainsboro;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     color: darkcyan; }
     #list article img {
       padding-top: 3%;
@@ -81,3 +85,41 @@ div.toolbar {
   #about div p {
     color: #6d8ca0;
     font-size: 1.12em; }
+
+#contact {
+  text-align: right;
+  margin-top: 60px; }
+  #contact h1,
+  #contact h4 {
+    color: #39b5d5;
+    font-weight: 800;
+    font-size: 1.5em;
+    line-height: 15%;
+    text-transform: uppercase; }
+  #contact h4 {
+    font-size: 1em; }
+  #contact form {
+    margin-top: 20px;
+    width: 100%; }
+    #contact form input,
+    #contact form textarea {
+      width: 95%;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border: 1px solid #757575;
+      background: white; }
+    #contact form textarea::placeholder,
+    #contact form input::placeholder {
+      font-size: 15px; }
+    #contact form .submit-btn {
+      background-color: #39b5d5;
+      color: white;
+      width: 200px;
+      height: 40px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer; }
+      #contact form .submit-btn:hover {
+        background-color: #63c5de; }
+      #contact form .submit-btn:active {
+        background-color: #2697b5; }

@@ -1,3 +1,6 @@
+body {
+  background-color: gainsboro; }
+
 div.main-wrapper {
   padding: 0 8%; }
 
@@ -9,16 +12,16 @@ header {
     display: table;
     width: 100%;
     height: 5%;
-    border-top: 1px solid #305075;
-    border-bottom: 1px solid  #305075;
+    border-top: 1px solid #617d8a;
+    border-bottom: 1px solid #617d8a;
     padding: 23px 0px;
     margin-top: 180px;
     align-items: center; }
     header nav a {
-      font-family: Arial;
+      font-family: serif;
       text-align: center;
       text-decoration: none;
-      color: #39b5d5;
+      color: #fc5830;
       display: table-cell;
       text-transform: uppercase;
       width: 30%; }
@@ -28,11 +31,12 @@ div.toolbar {
   div.toolbar input {
     height: 35px;
     width: 18%;
-    color: #39b5d5;
-    border: 1.25px solid #39b5d5;
-    padding-left: 1%; }
+    color: #fc5830;
+    border: 1.25px solid #fc5830;
+    padding-left: 1%;
+    background-color: transparent; }
   div.toolbar input::placeholder {
-    color: #39b5d5;
+    color: #fc5830;
     font-size: 15px; }
 
 #list {
@@ -44,9 +48,9 @@ div.toolbar {
     float: left;
     width: 49%;
     margin-top: 20px;
-    background-color: gainsboro;
-    font-family: Arial, Helvetica, sans-serif;
-    color: darkcyan; }
+    background-color: #ffffff;
+    font-family: serif;
+    color: #bfbfbf; }
     #list article img {
       padding-top: 3%;
       padding-left: 3%;
@@ -56,28 +60,66 @@ div.toolbar {
       padding: 5px 22px 15px 28px;
       width: 90%; }
     #list article div.post-description {
-      color: darkcyan;
+      color: #bfbfbf;
       padding: 0;
       padding-left: 1%; }
     #list article h3 {
       font-size: 1.6em;
       text-transform: uppercase;
-      border-top: 1px solid darkcyan;
+      border-top: 1px solid #bfbfbf;
       padding-top: 5px;
       margin: 12px 0 0 0; }
     #list article p {
-      color: #6d8ca0;
-      font-family: sans-serif;
+      color: #757575;
+      font-family: serif;
       font-size: 1.14em;
       margin: 8px 0 18px 0;
       line-height: 30px; }
 
 #about {
-  font-family: sans-serif; }
+  font-family: serif; }
   #about div h1 {
     text-transform: uppercase;
     text-align: right;
-    color: #39b5d5; }
+    color: #fc5830; }
   #about div p {
-    color: #6d8ca0;
+    color: #757575;
     font-size: 1.12em; }
+
+#contact {
+  text-align: right;
+  margin-top: 60px; }
+  #contact h1,
+  #contact h4 {
+    color: #fc5830;
+    font-weight: 800;
+    font-size: 1.5em;
+    line-height: 15%;
+    text-transform: uppercase; }
+  #contact h4 {
+    font-size: 1em; }
+  #contact form {
+    margin-top: 20px;
+    width: 100%; }
+    #contact form input,
+    #contact form textarea {
+      width: 95%;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border: 1px solid #757575;
+      background: gainsboro; }
+    #contact form textarea::placeholder,
+    #contact form input::placeholder {
+      font-size: 15px; }
+    #contact form .submit-btn {
+      background-color: #fc5830;
+      color: white;
+      width: 200px;
+      height: 40px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer; }
+      #contact form .submit-btn:hover {
+        background-color: #fd8162; }
+      #contact form .submit-btn:active {
+        background-color: #f53304; }
