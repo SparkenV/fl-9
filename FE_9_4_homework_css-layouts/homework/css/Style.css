@@ -1,0 +1,278 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+span{
+    font-weight: 700;
+}
+
+header{
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background: url("../img/apples.jpg") center+0px;
+    background-size: cover;
+    height: 104vh;
+}
+.menu-container
+{
+    display: flex;
+    position: absolute;
+    top:29px;
+    right: 16px;
+    width: 40%;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 0.9em;
+}
+.menu-a{
+    text-decoration: none;
+    color: white;
+    margin: 0 30px;
+}
+.header-center-text{
+    text-transform: uppercase;
+    text-align: center; 
+    margin-top: 250px;
+    margin-bottom: 0;
+    font-weight: 100;
+    letter-spacing: 1vh;
+    font-size: 3em;
+}
+
+.header-center-text > span{
+    font-size: 200%;
+}
+
+.header-center-small-text{
+    font-size: 95%;
+    margin: 0;
+    font-weight: 100;
+    letter-spacing: 0; 
+}
+
+.top-left {
+    
+    position: absolute;
+    top: 32px;
+    left: 51px;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+header > p{
+    text-align: center;
+}
+
+.button-design,
+.like-button{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-color: white;
+    border-style: solid;
+}
+.button-design{
+    height: 50px;
+    width: 220px;
+    margin-top: 150px;
+}
+
+/* Under Header */
+#underheader{
+    display: flex;
+}
+#underheader > h2:nth-child(1){
+    width: 50%;
+    padding: 100px 30px;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+#underheader > h2:nth-child(2){
+    width: 50%;
+    padding: 100px 30px;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+
+#underheader > div > span{
+    font-weight: 700;
+}
+
+/* Post section */
+.post-section{
+    background-color: #F3F3F3;
+    padding: 30px 30px;
+}
+.post-section > h2{
+    font-size: 2em;
+    padding: 100px 0;
+    text-align: center;
+    font-weight: 400;
+}
+.post-section > h1 > span{
+    font-weight: 700;
+}
+.post-article{
+    
+    margin: 15px 0;
+    display: flex;
+}
+
+.post-article:nth-child(odd) > div{
+    position: relative;
+    height: 300px;
+    width: 59%;
+
+    background: url("../img/sample3.jpg") center;
+    background-size: cover;
+    box-shadow: inset 0 0 300px 8px rgba(0,0,0,.5);
+}
+.post-article:nth-child(even) > div{
+    position: relative;
+    height: 300px;
+    width: 59%;
+
+    background: url("../img/sample.jpg") center;
+    background-size: cover;
+    box-shadow: inset 0 0 300px 8px rgba(0,0,0,.5);
+}
+
+.post-article:nth-child(odd)
+{
+    flex-direction: row-reverse;
+}
+
+.post-text{
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    margin: auto;
+    width: 34%;
+    text-align: center;
+}
+
+.like-button{
+    position: absolute;
+    text-align: center;
+    height: 32px;
+    width: 50px;
+    top: 15px;
+    right: 15px;
+}
+
+.image-description{
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+   
+}
+
+.email-div{
+    background-color: white;
+    display: flex;
+    padding: 45px 25px;
+}
+
+.email-div > p{
+font-size: 1.5em;
+
+}
+.email-div >  input,
+.footer-email-div > input{
+    width: 65%;
+    height: 45px;
+    margin: auto 0 auto auto;
+    background-color:#F3F3F3;
+    border: 1px solid #343638
+}
+
+.email-div >  input::placeholder,
+.footer-email-div > input::placeholder{
+    padding-left: 15px;
+    color: #343638;
+    
+}
+
+.email-div >button,
+.footer-email-div > button{
+    margin: auto 0;
+    height: 49px;
+    width: 90px;
+    background-color: #343638;
+    border: 0;
+    border-style: solid;
+    color:white;
+}
+
+footer{
+    margin: 0 30px;
+}
+.footer-column{
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-column > div{
+    width: 23%;
+
+}
+
+.footer-column >div > h1{
+    font-size: 1em;
+}
+.footer-column >div > p{
+    font-size: 0.8em;
+    color: #9E9E9E;
+}
+.footer-column >div:nth-child(2) > p{
+    font-style: italic;
+    font-size: 0.8em;
+    color: #9E9E9E;
+}
+
+.footer-bottom{
+    border-top: 1px solid #9E9E9E;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+.footer-bottom > p{
+
+    color: #9E9E9E;
+}
+.footer-menu-container{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 0.9em;
+    width: 300px;
+}
+.footer-menu-li{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-email-div{
+    display: flex;
+    width: 100%;
+}
+
+.footer-email-div > input{
+    width: 70%;
+}
+.footer-email-div > button{
+    width: 30%;
+}
