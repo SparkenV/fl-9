@@ -2,6 +2,7 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
+ /*
 :root {
   --bg-color--dark: #0a1223;
   --bg-color--light: #fff;
@@ -11,15 +12,212 @@
   --article-title: #ddd;
   --article-title--dark: #000;
   --thumbnail--description: #5d5d5d;
-
+*/
   /* These styles are needed only for media query max-width: 575px */
 
   /* The 'Up' button (circle button at right bottom corner) */
-  --btn-color: #fff;
+  /*--btn-color: #fff;
   --btn-bg-color: #5ebcff;
 
   --navigation-border-bottom: #ddd;
   --thumbnail-title: #484747;
 }
-
+*/
 /* Your styles go here */
+
+
+body{
+  font-family: sans-serif;
+  background-color: #0a1223;
+  margin-bottom: 150px;
+}
+
+header{
+  margin-right: 0;
+}
+header > h1{
+  color: #ddd;
+  text-align: center;
+  font-size: 5vw;
+  margin: 200px auto;
+}
+header > h1 > span{
+  font-style: italic;
+}
+
+
+.menu{
+  margin: 15px 15px 0 auto;
+  width: 23%;
+  display: flex;
+
+  justify-content: space-between;
+
+  
+}
+.menu > a{
+  text-decoration: none;
+  color: #5d5d5d;
+}
+
+a:active{
+  color: #54597d;
+}
+
+a:hover{
+  color: #54597d;
+}
+
+
+.moon-post:nth-child(even){
+  flex-direction: row-reverse;
+
+}
+
+.moon-post{
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.post-text{
+  width: 49%;
+  
+}
+
+.post-img-div{
+  width: 47%;
+  min-width: 500px;
+  height: auto;
+}
+@media screen and (min-width: 576px){
+  .post-text > h2{
+    font-size: 30px;
+    background:linear-gradient(90deg, white 35%, gray 50%, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+
+  }
+}
+
+.post-text > p{
+  text-align: justify;
+  font-size: 15px;
+  text-indent: 20px;
+  color: #5d5d5d;
+}
+
+.moon-post > div > img{
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px)
+{
+.moon-post{width: 100%;}
+}
+
+/*Middle screen-size*/
+@media screen and (max-width: 990px){
+
+header > h1{
+font-size: 50px;
+
+}
+
+.moon-post:nth-child(even){
+  flex-direction: column;
+}
+
+.menu{
+  width: 45%;
+  margin: 30px auto;
+  justify-content: space-between;
+
+}
+
+.moon-post{
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moon-post > div{
+  width: 500px; 
+}
+.post-text >  h2{
+  font-size: 2.1em;
+  
+}
+
+
+.post-text > p{
+  font-size: 1.05em;
+}
+}
+
+#to-top-button{
+  display: none;
+}
+
+
+@media screen and (max-width: 575px) {
+  body {
+    background-color: #fff;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu > a {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+  }
+
+  .post-text > h2{
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  a:active{
+    color: #54597d;
+    font-weight: 700;
+  }
+
+  header > h1{
+    color: black;
+  }
+
+  .moon-post > div{
+    max-width: 500px;
+    width: 95%; 
+  }
+  #to-top-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Fixed/sticky position */
+    right: 15px;
+    bottom: 15px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #5ebcff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    color:#fff;
+    border: none;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.24);
+  }
+  #to-top-button>a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
