@@ -4,12 +4,14 @@ function userCard(cardIndex) {
     let transactionLimit = 100;
     let historyLogs = [];
     let key = cardIndex;
-  
+    let tax = 0.5;
+    let hundredPercent = 100;
+
     function getTaxed(number){
         const tax = 0.5;
         const hundredPersent = 100;
-        number -= number * tax / hundredPersent;
-        return number;
+        const numberWithoutNumber = number * tax / hundredPersent;
+        return numberWithoutNumber;
     }
     
     function addHistoryLogs(description, number, date){
@@ -37,12 +39,10 @@ function userCard(cardIndex) {
     },
   
     takeCredits: function(sum){
-        if(sum < balance || sum < transactionLimit){
-            balance -= sum;
+
             addHistoryLogs('Withdrawal credits', sum, new Date().toLocaleString('en-GB'));
-        }else{
-            console.log('Operation is not possible!\nNot enough money on the card or credits limit exceeded.');
-        }
+            balance -= sum;
+
     },
   
     setTransactionLimit: function(sum){
@@ -51,12 +51,17 @@ function userCard(cardIndex) {
     },
   
     transferCredits: function(sum, card){
-        if(sum < balance || sum < transactionLimit){
-            balance -= sum;
-            card.putCredits(getTaxed(sum));
-        }else{
-            console.log('Operation is not possible!\nNot enough money on the card or credits limit exceeded.');
-        }
+        const sumPlusTaxes = sum * tax / hundredPercent + sum;
+
+        if (sumPlusTaxes > balance) {
+            console.log(`Error: You can't transfer credits - balance exceeded.`);
+        } else if (sumPlusTaxes > transactionLimit) {
+            console.log(
+                `Error: You can't transfer credits - transaction limit exceeded.`);
+        } else {
+        this.takeCredits(sumPlusTaxes);
+        card.putCredits(sum);
+      }
     }
   }
 }
@@ -69,8 +74,8 @@ class UserAccount{
     }
     
     addCard(){
-        if (this.listOfCards.length < this.maxNumberCards) {
-            this.listOfCards.push(userCard(this.listOfCards.length));
+        if (this.listOfCards.length < this.maximumNumberOfCards) {
+            this.listOfCards.push(userCard(this.listOfCards.length + 1));
         } else {
             console.log('Can not create!\nYou can not have more cards.');
         }
